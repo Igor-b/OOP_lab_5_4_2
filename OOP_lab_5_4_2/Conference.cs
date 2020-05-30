@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_lab_5_4_1
 {
-    class Conference
+    abstract class Conference
     {
         private string _name;
         private string _place;
@@ -19,12 +19,6 @@ namespace OOP_lab_5_4_1
         {
             get => _place;
             set => _place = value;
-        }
-
-        public Conference()
-        {
-            _name = "Не вказано";
-            _place = "Не вказано";
         }
 
         public virtual string UkrainianI(string str)
@@ -45,12 +39,6 @@ namespace OOP_lab_5_4_1
             }
 
             return new string(ch);
-        }
-
-        public Conference(string name, string place)
-        {
-            _name = UkrainianI(name);
-            _place = UkrainianI(place);
         }
     }
 }
